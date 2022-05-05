@@ -23,9 +23,30 @@ The ones I copied to my bucket in S3 were:
 - rearc-usa-hospital-beds/
 - static-datasets/
 
-The steps are the following:
-- Select the buckets and look for the same option as in the image below:
+As they don't permit any kind of copy or synchronization, the process has to be manual.
 
-![alt text](https://github.com/jack3DX/Data-Engineering-COVID_database-AWS/blob/main/images/CopyingPublicDatasets.png?raw=true)
+I used the following command in cmd, once I got to the path I stored the folders: aws s3 cp . s3://de-covid-raw-dev/ --recursive 
+
+## Extracting schema and information
+
+For this step, AWS Crawler must be used. I've opened AWS Glue and went to the Crawlers section and created one with the following settings:
+- name: de-covid-enigma-jhu-crawler
+- source type: data stores (as I want it to create the tables from scratch)
+- crawl all folders
+- data store: S3
+- path: s3://de-covid-raw-dev/enigma-jhu/csv
+- role: one I had created with roles of S3FullAccess, GlueConsoleFullAccess and GlueServiceRole
+- Run on demand
+- database: created one name covid19-database
+
+It ran ok. Opening Athena, I could already Query some information about it:
+
+![alt text](https://github.com/jack3DX/Data-Engineering-COVID_database-AWS/blob/main/images/FirstQuery.PNG?raw=true)
+
+
+
+
+
+
 
 
