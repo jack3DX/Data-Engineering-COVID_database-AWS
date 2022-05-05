@@ -13,8 +13,19 @@ In this repository, I'll show my data engineering project on the COVID numbers. 
 
 ## The dataset
 
-The dataset for this project may be found on AWS website, [in this link](https://aws.amazon.com/pt/covid-19-data-lake/).</br>
+The dataset for this project may be found on AWS website, [in this link](https://s3.console.aws.amazon.com/s3/buckets/covid19-lake/?region=us-east-2&tab=objects).</br>
 There's some additional information about this data on AWS blog [post](https://aws.amazon.com/pt/blogs/big-data/a-public-data-lake-for-analysis-of-covid-19-data/#:~:text=The%20AWS%20COVID%2D19%20data,all%20the%20available%20data%20sources.) .
 
-In the blog post, there's also a link that opens AWS S3 explorer, where is possible to see all the contents and tables of this data. As read in it, the data is presented at "enigma-jhu"
+The ones I copied to my bucket in S3 were:
+- enigma-jhu/
+- enigma-nytimes-data-in-usa/
+- rearc-covid-19-testing-data/
+- rearc-usa-hospital-beds/
+- static-datasets/
+
+The steps are the following:
+- Select the buckets and look for the same option as in the image below:
+
+![alt text](https://github.com/jack3DX/Data-Engineering-COVID_database-AWS/blob/main/images/CopyingPublicDatasets.png?raw=true)
+
 
