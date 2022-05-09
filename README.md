@@ -43,9 +43,13 @@ It ran ok. Opening Athena, I could already Query some information about it:
 
 ![alt text](https://github.com/jack3DX/Data-Engineering-COVID_database-AWS/blob/main/images/FirstQuery.PNG?raw=true)
 
+As I saw it working, I had to insert some prefix names to the table, because the process need to be done for every bucket.
 
+![alt text](https://github.com/jack3DX/Data-Engineering-COVID_database-AWS/blob/main/images/TableNamePrefix.PNG?raw=true)
 
+Then I proceeded to add crawlers for every bucket. The final list is presented in the image below:
 
+![alt text](https://github.com/jack3DX/Data-Engineering-COVID_database-AWS/blob/main/images/CrawlersList.PNG?raw=true)
 
 
 
