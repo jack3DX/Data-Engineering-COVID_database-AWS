@@ -51,6 +51,14 @@ Then I proceeded to add crawlers for every bucket. The final list is presented i
 
 ![alt text](https://github.com/jack3DX/Data-Engineering-COVID_database-AWS/blob/main/images/CrawlersList.PNG?raw=true)
 
+# Model conversion
 
+The next step is to convert the relational datamodel (which is present in the Tables of Glue) into a dimensional, to be able to transform and write scripts accordingly to build the data warehouse. 
+
+On a star schema, the best arrangement I've found is to put Covid as the fact table and hospital, region and date as dimensions. If you're following this project, do it yourself as an exercise.
+
+Also, if you need a flowchart maker, I suggest using draw io, which may also be found as diagrams.net.
+
+The next steps were done in a jupyter notebook, which is in this repository.
 
 
